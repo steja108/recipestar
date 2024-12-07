@@ -7,6 +7,10 @@ import '../css/tailwind.css';
 const AboutUs = () => {
     const navigate = useNavigate();
 
+    const navigateToHome = () => {
+      navigate('/');
+    };
+
   const navigateToSignUp = () => {
     navigate('/signup');
   };
@@ -51,7 +55,7 @@ const AboutUs = () => {
     <div>
         <header className="header">
         <div className="container">
-          <a href='/'>
+          <a onClick={navigateToHome}>
           <div className="logo">
             <img src={recipe_star_logo} alt="Recipe star" className="logo-img"/>
           </div>

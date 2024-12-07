@@ -102,7 +102,7 @@ const Login = () => {
         <p className="signin-text">
           Don't Have an account?{' '}
           <a onClick={navigateToSignUp} className="signin-link">
-            Sign Up
+            Sign Upc
           </a>
         </p>
       </div>
