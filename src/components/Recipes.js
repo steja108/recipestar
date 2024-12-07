@@ -141,19 +141,25 @@ const Recipes = () => {
   const navigateToRecipes = () => {
     navigate('/recipes');
   };
+  const navigateToAboutus = () => {
+    navigate('/aboutus');
+  };
+  const navigateToHome = () => {
+    navigate('/');
+  };
 
   return (
     <div>
     <header className="header">
         <div className="container">
           <div className="logo">
-            <a href="/">
+            <a onClick={navigateToHome}>
             <img src={recipe_star_logo} alt="Recipe star" className="logo-img"/>
             </a>
           </div>
           <nav className="nav">
-            <a href="/recipes" className="nav-link">Recipes</a>
-            <a href="/aboutUs" className="nav-link">About Us</a>
+            <a onClick={navigateToRecipes} className="nav-link">Recipes</a>
+            <a onClick={navigateToAboutus} className="nav-link">About Us</a>
           </nav>
           <div className="header-buttons">
             <button onClick={navigateToLogin} className="button anim-button">Login</button>

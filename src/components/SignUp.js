@@ -19,6 +19,26 @@ class Signup extends Component {
     };
   }
 
+  navigate = useNavigate();
+
+  navigateToSignUp = () => {
+    navigate('/signup');
+  };
+
+  navigateToLogin = () => {
+    navigate('/login');
+  };
+
+  navigateToRecipes = () => {
+    navigate('/recipes');
+  };
+
+  navigateToAboutus = () => {
+    navigate('/aboutus');
+  };
+  navigateToHome = () => {
+    navigate('/');
+  };
   // Handle input changes
   handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -59,7 +79,7 @@ class Signup extends Component {
         {/* Left Panel */}
         <div className="left-panel">
           <div className="logo">
-            <a href='/'>
+            <a onClick={this.navigateToHome}>
             <img
               src={recipe_star_logo}
               alt="InsideBox Logo"
@@ -106,7 +126,7 @@ class Signup extends Component {
             </button>
           </form>
           <p className="signin-text">
-            Have an account? <a href="/login" className="signin-link">Sign In</a>
+            Have an account? <a onClick={this.navigateToLogin} className="signin-link">Sign In</a>
           </p>
         </div>
 

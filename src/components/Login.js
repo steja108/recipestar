@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 import { FaEye, FaEyeSlash } from 'react-icons/fa'; // Icons for password visibility
 import { FaFacebook, FaGoogle, FaApple } from 'react-icons/fa';
 import GoogleLoginButton from '../components/GoogleLoginButton';
@@ -19,6 +20,27 @@ class Signup extends Component {
     };
   }
 
+  navigate = useNavigate();
+
+  navigateToSignUp = () => {
+    navigate('/signup');
+  };
+
+  navigateToLogin = () => {
+    navigate('/login');
+  };
+
+  navigateToRecipes = () => {
+    navigate('/recipes');
+  };
+
+  navigateToAboutus = () => {
+    navigate('/aboutus');
+  };
+
+  navigateToHome = () => {
+    navigate('/');
+  };
   // Handle input changes
   handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -59,7 +81,7 @@ class Signup extends Component {
         {/* Left Panel */}
         <div className="left-panel">
           <div className="logo">
-            <a href="/">
+            <a onClick={this.navigateToHome}>
             <img
               src={recipe_star_logo}
               alt="InsideBox Logo"
@@ -97,7 +119,7 @@ class Signup extends Component {
             </button>
           </form>
           <p className="signin-text">
-            Don't have an account? <a href="/signUp" className="signin-link">Sign Up</a>
+            Don't have an account? <a onClick={this.navigateToSignUp} className="signin-link">Sign Up</a>
           </p>
         </div>
 

@@ -6,7 +6,10 @@ import recipe_star_logo from '../images/recipe_star_logo.png';
 
 const Home = () => {
   const navigate = useNavigate();
-
+  
+  const navigateToHome = () => {
+    navigate('/');
+  };
   const navigateToSignUp = () => {
     navigate('/signup');
   };
@@ -17,6 +20,10 @@ const Home = () => {
 
   const navigateToRecipes = () => {
     navigate('/recipes');
+  };
+
+  const navigateToAboutus = () => {
+    navigate('/aboutus');
   };
 
 
@@ -57,8 +64,8 @@ const Home = () => {
             <img src={recipe_star_logo} alt="Recipe star" className="logo-img"/>
           </div>
           <nav className="nav">
-            <a href="/recipes" className="nav-link">Recipes</a>
-            <a href="/aboutUs" className="nav-link">About Us</a>
+            <a onClick={navigateToRecipes} className="nav-link">Recipes</a>
+            <a onClick={navigateToAboutus} className="nav-link">About Us</a>
           </nav>
           <div className="header-buttons">
             <button onClick={navigateToLogin} className="button anim-button">Login</button>
