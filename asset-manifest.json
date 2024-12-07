@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/recipestar/static/css/main.6320af94.css",
-    "main.js": "/recipestar/static/js/main.277383b5.js",
+    "main.js": "/recipestar/static/js/main.aaea77d0.js",
     "static/js/488.fd1e3162.chunk.js": "/recipestar/static/js/488.fd1e3162.chunk.js",
     "static/media/AboutUsPage.jpg": "/recipestar/static/media/AboutUsPage.a9750e0863427036fe32.jpg",
     "static/media/recipe_star_logo.png": "/recipestar/static/media/recipe_star_logo.da439bd6aa30954ae6c4.png",
     "index.html": "/recipestar/index.html",
     "main.6320af94.css.map": "/recipestar/static/css/main.6320af94.css.map",
-    "main.277383b5.js.map": "/recipestar/static/js/main.277383b5.js.map",
+    "main.aaea77d0.js.map": "/recipestar/static/js/main.aaea77d0.js.map",
     "488.fd1e3162.chunk.js.map": "/recipestar/static/js/488.fd1e3162.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6320af94.css",
-    "static/js/main.277383b5.js"
+    "static/js/main.aaea77d0.js"
   ]
 }
