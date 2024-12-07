@@ -7,9 +7,9 @@ import '../css/tailwind.css';
 const AboutUs = () => {
     const navigate = useNavigate();
 
-    const navigateToHome = () => {
-      navigate('/');
-    };
+  const navigateToHome = () => {
+    navigate('/');
+  };
 
   const navigateToSignUp = () => {
     navigate('/signup');
@@ -61,7 +61,7 @@ const AboutUs = () => {
           </div>
           </a>
           <nav className="nav">
-            <a href="/recipes" className="nav-link">Recipes</a>
+            <a onClick={navigateToRecipes} className="nav-link">Recipes</a>
             <a href="#" className="nav-link">About Us</a>
           </nav>
           <div className="header-buttons">
