@@ -44,15 +44,20 @@ const Login = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const { name, email, password } = formData;
+    const { email, password } = formData;
 
     try {
-      const response = await axios.post('http://localhost:5001/api/users/register', { name, email, password });
-      setSuccess(response.data.message);
-      setError('');
+      const response = await axios.post(
+        'http://localhost:5001/api/users/login', // Corrected endpoint
+        { email, password }
+      );
+      
+      // Save token and redirect
+      localStorage.setItem('token', response.data.token);
+      localStorage.setItem('userId', response.data.userId);
+      navigate('/'); // Redirect to homepage
     } catch (error) {
-      setError(error.response ? error.response.data.message : 'An error occurred');
-      setSuccess('');
+      setError(error.response?.data?.message || 'Login failed. Check credentials.');
     }
   };
 
@@ -96,7 +101,7 @@ const Login = () => {
             </span>
           </div>
           <button type="submit" className="signup-button">
-            Sign up
+            Login
           </button>
         </form>
         <p className="signin-text">
